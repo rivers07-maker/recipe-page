@@ -115,6 +115,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 .main-container {
@@ -186,7 +187,6 @@ table {
 }
 
 table tr {
-  width: 38.75rem;
   display: flex;
   justify-content: space-between;
   padding: 8px 24px;
@@ -216,9 +216,11 @@ table td {
   color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 540px) {
+@media (max-width: 375px) {
+
   .main-container {
     padding: 0;
+    border-radius: 0;
   }
 
   .main-container img {
@@ -226,6 +228,6 @@ table td {
   }
 
   .second-container {
-    padding: 0 24px;
+    padding: 32px;
   }
 }
