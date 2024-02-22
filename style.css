@@ -1,5 +1,6 @@
 :root {
   /* Primary */
+
   --color-nutmeg: hsl(14, 45%, 36%);
   --color-dark-raspberry: hsl(332, 51%, 32%);
 
@@ -11,6 +12,8 @@
   --color-wenge-brown: hsl(30, 10%, 34%);
   --color-dark-charcoal: hsl(24, 5%, 18%);
 }
+
+/* ------CSS RESET------ */
 
 /* Box sizing rules */
 *,
@@ -102,16 +105,127 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/* ------CSS RESET------ */
 
+body {
+  background-color: var(--color-eggshell);
+  color: var(--color-wenge-brown);
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.main-container {
+  max-width: 43.75rem;
+  background-color: var(--color-white);
+  padding: 32px;
+  border-radius: 12px;
+}
 
+.main-container img {
+  border-radius: 8px;
+}
 
+h1,
+h3 {
+  font-family: "Young Serif", serif;
+  color: var(--color-nutmeg);
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+li::marker {
+  color: var(--color-nutmeg);
+  font-weight: 700;
+}
+
+li {
+  padding: 4px 0 4px 16px;
+  margin-left: -14px;
+}
+
+.introduction h1 {
+  font-size: 2rem;
+  color: var(--color-dark-charcoal);
+}
+
+.prep-time h2 {
+  color: var(--color-dark-raspberry);
+  font-size: 1.25rem;
+}
+
+.prep-time li::marker {
+  color: var(--color);
+}
+
+.prep-time {
+  background-color: var(--color-rose-white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 24px 0;
+}
+
+hr {
+  margin: 24px 0;
+  border: 1px solid var(--color-light-grey);
+}
+
+.instructions {
+  margin: 30px 0;
+}
+
+.nutrition {
+  margin-top: 30px;
+}
+
+table {
+  margin-top: 16px;
+}
+
+table tr {
+  width: 38.75rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 24px;
+  border-bottom: 1px solid var(--color-light-grey);
+}
+
+table tr:last-of-type {
+  border: none;
+}
+
+table th {
+  font-weight: 400;
+}
+
+table td {
+  color: var(--color-nutmeg);
+  font-weight: 700;
+}
 
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
+  margin: 20px;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 540px) {
+  .main-container {
+    padding: 0;
+  }
+
+  .main-container img {
+    border-radius: 0;
+  }
+
+  .second-container {
+    padding: 0 24px;
+  }
 }
